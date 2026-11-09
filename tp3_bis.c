@@ -28,6 +28,9 @@ int main(){
             if (i<5){
                 branche_haute(choix,img);
             }
+            else if (i>=5){
+                corps(choix,img);
+            }
             else
             {
                 img[i][j] = 'j';

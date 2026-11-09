@@ -35,3 +35,34 @@ void branche_haute(int choix, char img[3*choix-1][choix*choix]){
     }
     return;
 }
+
+void corps(int choix, char img[3*choix-1][choix*choix]){
+    int width = choix * choix;
+    int mid = width / 2;
+    int a = width / 4;
+    for (int k = 0; k < choix; k++) {
+        int r = choix + k;
+        int L = k * a / (choix - 1);
+        int R = 2 * mid - L;
+        for (int c = L; c <= R; c++) 
+        {
+            img[r][c] = 'S';
+        }
+        if (k == 0) {
+            img[r][L] = '"';  
+            img[r][R] = '"';
+        } 
+        else if (k < choix - 2) {
+            img[r][L] = '\''; 
+            img[r][L + 1] = 'V';
+            img[r][R] = '\''; 
+            img[r][R - 1] = 'V';
+        }
+        else if (k<L || k>R) {
+            img[r][L] = ' ';
+        } 
+        else {
+            img[r][L] = '.';  img[r][R] = '.';
+        }
+    }
+}
