@@ -14,6 +14,12 @@ int main(){
             /*Dimensions*/
     int width = choix * choix;
     int max_height = 3 * choix - 1;
-    printf("%d ; %d",max_height,width);
+    printf("%d ; %d\n",max_height,width);
+
+            /*Declaration du tableau*/
+    char img[max_height][width];
+
+    
+    
     return 0;
 }
