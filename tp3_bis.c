@@ -19,6 +19,16 @@ int main(){
             /*Declaration du tableau*/
     char img[max_height][width];
 
+            /*Initialisation et affichage du tableau*/
+    for (int i = 0; i < max_height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            img[i][j] = ' ';
+            printf("%c", img[i][j]);
+        }
+        printf("\n");
+    }
     
     
     return 0;
