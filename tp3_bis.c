@@ -9,11 +9,12 @@ int main(){
         printf ("Choix invalide\n");
         choix = lireChoix(choix);
     }
-    // printf ("%d", choix);
+    
 
             /*Dimensions*/
     int width = choix * choix;
     int max_height = 3 * choix - 1;
+    int mid = width / 2;
     printf("%d ; %d\n",max_height,width);
 
             /*Declaration du tableau*/
@@ -24,7 +25,13 @@ int main(){
     {
         for (int j = 0; j < width; j++)
         {
-            img[i][j] = ' ';
+            if (i<5){
+                branche_haute(choix,img);
+            }
+            else
+            {
+                img[i][j] = 'j';
+            }
             printf("%c", img[i][j]);
         }
         printf("\n");
